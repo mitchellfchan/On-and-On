@@ -8,15 +8,19 @@ repeat
 	
 	-- delay so we dont burn up the processor
 	
-	if myhour ≥ 21 or myhour < 5 then
+	if myhour ≥ 12 or myhour < 5 then
 		
-		tell application "Discord"
-			activate
-		end tell
+		if application "Discord" is not running then
+			tell application "Discord"
+				activate
+			end tell
+		end if
 		
 		tell application "Spotify"
 			
-			activate
+			if application "Spotify" is not running then
+				activate
+			end if
 			
 			set repeating to true
 			
