@@ -8,7 +8,7 @@ repeat
 	
 	-- delay so we dont burn up the processor
 	
-	if myhour ≥ 12 or myhour < 5 then
+	if myhour ≥ 21 or myhour < 5 then
 		
 		if application "Discord" is not running then
 			tell application "Discord"
