@@ -8,7 +8,7 @@ repeat
 	
 	-- delay so we dont burn up the processor
 	
-	if myhour ≥ 21 or myhour < 5 then
+	if myhour ≥ 12 or myhour < 5 then
 		
 		if application "Discord" is not running then
 			tell application "Discord"
@@ -32,11 +32,9 @@ repeat
 			
 			set x to 214
 			
-			-- Almost the duration of Like A G6. We don't wanna get to the ~end~ cause Spotify might throw a "commercial" which throws Applescript into a tailspin. This could be overcome with some tricky code, aka nested "trys", but I found a hack which is to just ~quit~ Spotify and restart, as Spotify doesn't seem to throw commercials the first thing out of the gate. It's a bit unglamorous, though makes for a pretty small script. :/
+			-- 214 is Almost the duration of Like A G6. We don't wanna get to the ~end~ cause Spotify might throw a "commercial" which throws Applescript into a tailspin. This could be overcome with some tricky code, aka nested "trys", but I found a hack which is to just ~quit~ Spotify and restart, as Spotify doesn't seem to throw commercials the first thing out of the gate. It's a bit unglamorous, though makes for a pretty small script. :/
 			
 			delay x
-			
-			quit
 			
 		end tell
 		
